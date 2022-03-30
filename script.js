@@ -24,11 +24,9 @@ class Employee extends Person {
   celebrate() {
     let thisYear = new Date().getFullYear();
     let birthdayThisYear = new Date(this.birthDayDate).setFullYear(thisYear);
-    let isCelebrate =
-      isWeekend(birthdayThisYear) === true
-        ? super.celebrate()
-        : "Happy Birthday, but I need to work";
-    return isCelebrate;
+    return isWeekend(birthdayThisYear) === true
+      ? super.celebrate()
+      : "Happy Birthday, but I need to work";
   }
 }
 
